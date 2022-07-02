@@ -1,0 +1,455 @@
+body {
+    font-family: "Cinzel", serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+h1,
+h2 {
+    color: black;
+    font-size: 90px;
+    text-align: end;
+    text-decoration: underline rgb(138, 177, 49);
+}
+
+h3 {
+    color: black;
+    font-size: 90px;
+    text-align: center;
+}
+
+h4 {
+    color: rgb(248, 245, 245);
+    font-size: 60px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.header {
+    background-image: url(../images/kopf.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-position: right; */
+    background-size: contain;
+}
+
+/***************************************************/
+/******************NAVIGATION***********************/
+/***************************************************/
+.navi {
+    color: black;
+    border: 2px solid rgb(138, 177, 49);
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.navi li a {
+    color: black;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    font-size: 90px;
+}
+
+.navi li a:hover {
+    color: rgb(138, 177, 49);
+}
+
+.mainme {
+    margin-top: 400px;
+}
+
+/***************************************************/
+/******************DAS BIN ICH**********************/
+/***************************************************/
+.dasbinich {
+    color: rgb(138, 177, 49);
+    font-size: 50px;
+    text-align: center;
+    margin: 0 20px 0 0;
+}
+
+.video p {
+    background-color: black;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0px;
+}
+
+/***************************************************/
+/******************TIMELINE*************************/
+/***************************************************/
+#time {
+    margin-top: 400px;
+}
+
+#timeline {
+    display: flex;
+    background-color: #031625;
+}
+
+#timeline:hover .tl-item {
+    width: 23.3333%;
+}
+
+.tl-item {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    min-height: 600px;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.tl-item:before,
+.tl-item:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tl-item:after {
+    background: rgba(3, 22, 37, 0.85);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.tl-item:before {
+    background: linear-gradient(to bottom, transparent 0%, black 90%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-item:hover {
+    width: 30% !important;
+}
+
+.tl-item:hover:after {
+    opacity: 0;
+}
+
+.tl-item:hover:before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+    transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.tl-item:hover .tl-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease 0.5s;
+}
+
+.tl-item:hover .tl-bg {
+    filter: grayscale(0);
+}
+
+.tl-content {
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 75%;
+    opacity: 0;
+}
+
+.tl-content h1 {
+    color: white;
+    font-size: 1.44rem;
+    text-align: center;
+}
+
+.tl-year {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.tl-year p {
+    font-size: 1.728rem;
+    line-height: 1;
+}
+
+.tl-bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+}
+
+/***************************************************/
+/******************FREUNDE**************************/
+/***************************************************/
+.mainfriends {
+    margin-top: 300px;
+}
+
+.project-section {
+    min-height: 100vh;
+}
+
+.card-container h3 {
+    color: rgb(138, 177, 49);
+    font-size: 33px;
+    font-weight: bold;
+    margin: 60px 20px 20px 100px;
+}
+
+.card-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 2px solid #181818;
+    margin: 20px;
+    width: 250px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-cathy {
+    background-image: url("../images/cathy.jpg");
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-cathy:hover {
+    filter: none;
+}
+
+.card-sammy {
+    background-image: url("../images/sammy.jpg");
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-sammy:hover {
+    filter: none;
+}
+
+.card-casper {
+    background-image: url("../images/casper.jpg");
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-casper:hover {
+    filter: none;
+}
+
+.card-ponto {
+    background-image: url("../images/ponto.jpg");
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-ponto:hover {
+    filter: none;
+}
+
+.card-maxundamy {
+    background-image: url("../images/maxundamy.jpg");
+    filter: grayscale(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-maxundamy:hover {
+    filter: none;
+}
+
+.card-info {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    background-color: #181818;
+    color: rgb(138, 177, 49);
+}
+
+.card-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.card-info p {
+    color: rgb(138, 177, 49);
+    font-size: 18px;
+    text-align: center;
+}
+
+/***************************************************/
+/******************MEIN LEBEN***********************/
+/***************************************************/
+
+
+/********************SOFA***************************/
+.mainlive {
+    margin-top: 400px;
+    display: inline-block;
+    padding: 50px;
+    margin: 30px 30px 30px 30px;
+}
+
+.mainlive img {
+    width: 50%;
+    height: auto;
+}
+
+.couchtext {
+    border: 3px solid #181818;
+    display: flex;
+    margin: 20px 20px 20px 20px;
+}
+
+.couchtext div {
+    background-color: #181818;
+    color: white;
+}
+
+.couchtext p {
+    font-size: 20px;
+    text-align: center;
+    margin: 60px 0;
+    padding: 20px 60px 20px 60px;
+    margin: 20px 20px 20px 20px;
+}
+
+#sofa {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/********************MITBEWOHNER********************/
+.buddys {
+    border: 3px solid #181818;
+    display: flex;
+    margin: 20px 20px 20px 20px;
+}
+
+.buddys img {
+    width: 50%;
+    height: auto;
+}
+
+.buddys p {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 60px 20px 60px;
+    margin: 20px 20px 20px 20px;
+}
+
+#cat {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*************FUTTER, SPIELEN & RENNEN**************/
+.food {
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    margin: 20px 20px 20px 20px;
+    background-color: #181818;
+    color: white;
+}
+
+.playmain {
+    border: 2px solid rgb(248, 247, 247);
+    width: 50%;
+    padding: 20px 60px 20px 60px;
+}
+
+.food p {
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px 60px 20px 60px;
+}
+
+#can {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+#play {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#run {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.end {
+    text-align: center;
+}
+
+/***************************************************/
+/******************FOOTER***************************/
+/***************************************************/
+.footer {
+    background-color: rgb(138, 177, 49);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer div {
+    color: black;
+    font-size: 90px;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
